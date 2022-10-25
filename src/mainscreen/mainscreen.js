@@ -1,34 +1,16 @@
-import React, { Component } from 'react'
-import './mainscreen.css'
-var stores = {
-  stores: [
-    {
-      id: 1,
-      name: "Ding Tea",
-    },
-    {
-      id: 2,
-      name: "Tocotoco",
-    },
-    {
-      id: 3,
-      name: "Gongcha",
-    },
-    {
-      id: 4,
-      name: "LeeTee",
-    },
-  ],
-};
+import React, { Component } from "react";
+import "./mainscreen.css";
+import { Products } from "../data/Products";
 export default class Mainscreen extends Component {
   render() {
     return (
       <div className="main-screen">
         <div className="tilte-main-screen">Store Menu</div>
+
         <div className="filter">
           <button className="btn-filter">Filter</button>
           <div className="sortby">
-            <span className="label-sortby">SortBy</span>
+            <span className="label-sortby">SortBy </span>
             <select
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
@@ -40,6 +22,7 @@ export default class Mainscreen extends Component {
             </select>
           </div>
         </div>
+
         <div className="topping">
           <p>Toppings:</p>
           <div class="row">
@@ -115,61 +98,26 @@ export default class Mainscreen extends Component {
         </div>
 
         <div className="list-card">
-          <div className="card col-sm">
-            <div className="content-card">
-              <div className="header-content">
-                <div className="code-item">MT-01</div>
-                <div className="name-item">Royal milk tea</div>
+          {Products.products.map((p) => (
+            <div className="card">
+              <div className="content-card">
+                <div className="header-content">
+                  <div className="code-item">MT-0{p.id}</div>
+                  <div className="name-item">{p.name}</div>
+                </div>
+                <div className="footer-content">
+                  <div className="title-footer-content"> Toppings:</div>
+                  <div className="category-topping">{p.toppings}</div>
+                </div>
               </div>
-              <hr style={{ border: "3px 0 solid" }} />
-              <div className="footer-content">
-                <div className="title-footer-content"> Toppings:</div>
-                <div className="category-topping">Milk foam, white pear</div>
-              </div>
-            </div>
-            <div className="footer-card">
-              <div className="trending">Trending</div>
-              <div className="cost">$4.8</div>
-            </div>
-          </div>
-
-          <div className="card col-sm">
-            <div className="content-card">
-              <div className="header-content">
-                <div className="code-item">MT-01</div>
-                <div className="name-item">Royal milk tea</div>
-              </div>
-              <hr style={{ border: "3px 0 solid" }} />
-              <div className="footer-content">
-                <div className="title-footer-content"> Toppings:</div>
-                <div className="category-topping">Milk foam, white pear</div>
+              <div className="footer-card">
+                <div className="trending">Trending</div>
+                <div className="cost">${p.price}</div>
               </div>
             </div>
-            <div className="footer-card">
-              <div className="trending">Trending</div>
-              <div className="cost">$4.8</div>
-            </div>
-          </div>
-
-          <div className="card col-sm">
-            <div className="content-card">
-              <div className="header-content">
-                <div className="code-item">MT-01</div>
-                <div className="name-item">Royal milk tea</div>
-              </div>
-              <hr style={{ border: "3px 0 solid" }} />
-              <div className="footer-content">
-                <div className="title-footer-content"> Toppings:</div>
-                <div className="category-topping">Milk foam, white pear</div>
-              </div>
-            </div>
-            <div className="footer-card">
-              <div className="trending">Trending</div>
-              <div className="cost">$4.8</div>
-            </div>
-          </div>
-
+          ))};
         </div>
+
       </div>
     );
   }

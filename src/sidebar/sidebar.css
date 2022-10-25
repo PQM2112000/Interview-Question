@@ -5,24 +5,26 @@
     font-weight: 700;
     font-size: large;
     text-align: center;
-
-    padding: 20px;
+    width: 170px;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
 }
-.list-group{
+.listgroup{
     text-align: center;
     font-weight: 400;
     text-decoration: none;
-    margin : 10px 0px;
+    margin-top : 10px;
+    font-size: 17px;
+    
 }
-.trending{
-    color: white;
-    background-color: rgb(25, 25, 103);
-    font-size: small;
-    padding: 0 10px;
-    font-weight: 500;
-    margin: 3px 0;
-    justify-content: center;
+.NameStore{
+    height: 50px;
+    margin-bottom: 0;
+    display: flex;
+        align-items: center;
+        justify-content: center;
 }
-.cost{
-    font-size: larger;
+.NameStore:hover{
+    background-color: rgb(34, 34, 139);
 }

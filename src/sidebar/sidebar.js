@@ -1,34 +1,15 @@
-import React, { Component } from 'react'
-import './sidebar.css'
-var stores = {
-  stores: [
-    {
-      id: 1,
-      name: "Ding Tea",
-    },
-    {
-      id: 2,
-      name: "Tocotoco",
-    },
-    {
-      id: 3,
-      name: "Gongcha",
-    },
-    {
-      id: 4,
-      name: "LeeTee",
-    },
-  ],
-};
+import React, { Component } from "react";
+import "./sidebar.css";
+import { Stores } from "../data/stores";
 
 export default class Sidebar extends Component {
   render() {
     return (
-      <div className='sidebar'>
-        <div className='title-sidebar'>Mile Tea Store</div>
-        {stores.stores.map((s) => (
-          <div id="list" class="list-group">
-            <a>{s.name}</a>
+      <div className="sidebar">
+        <div className="title-sidebar">Mile Tea Store</div>
+        {Stores.stores.map((s) => (
+          <div id="list" class="listgroup">
+            <p className="NameStore">{s.name}</p>
           </div>
         ))}
       </div>

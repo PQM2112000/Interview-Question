@@ -1,5 +1,5 @@
 .main-screen{
-    width: 100%;
+    margin-left: 170px;
     background-color: whitesmoke;
     padding: 20px;
 }
@@ -24,8 +24,8 @@
     border-radius: 5px;
 }
 .topping{
-background-color: white;
-padding:20px;
+    background-color: white;
+    padding:20px;
 }
 .list-item{
     display:flex;
@@ -33,7 +33,11 @@ padding:20px;
     justify-content: space-around;
 }
 .list-card{
-    
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 15px 0;
 }
 .card{
     background-color: white;
@@ -41,9 +45,19 @@ padding:20px;
     margin: 20px 0;
     color:rgb(25, 25, 103);
     font-weight: 400;
+    width: 170px;
 }
-.list-card{
-    display: flex;
+.header-content{
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+}
+.footer-content{
+    padding-top:5px;
+
+}
+.category-topping{
+    padding-bottom: 10px;
+    height: 50px;
 }
 .name-item{
     font-weight:600;
@@ -57,3 +71,18 @@ padding:20px;
     flex: 1 1;
     justify-content: space-between;
 }
+.trending {
+    color: white;
+    background-color: rgb(25, 25, 103);
+    font-size: small;
+    padding: 0 10px;
+    font-weight: 500;
+    margin: 3px 0;
+    justify-content: center;
+}
+
+.cost {
+    font-size: larger;
+}
+
+
