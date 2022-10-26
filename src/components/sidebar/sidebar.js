@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./sidebar.css";
-import { Stores } from "../data/stores";
+import { Stores } from "../../data/stores";
 
 export default class Sidebar extends Component {
   render() {

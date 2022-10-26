@@ -1,6 +1,6 @@
-import Sidebar from "./sidebar/sidebar";
+import Sidebar from "./components/sidebar/sidebar";
 import { Routes, Route } from "react-router-dom";
-import Mainscreen from "./mainscreen/mainscreen";
+import Mainscreen from "./pages/mainscreen/mainscreen";
 import "./App.css";
 function App() {
   return (
