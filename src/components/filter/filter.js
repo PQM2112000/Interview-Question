@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 export default function Filter() {
   const [select, setSelect] = useState();
   localStorage.setItem("filter", select);
   return (
     <div className="filter">
-      <button className="btn-filter" onClick={(e) => {}}>
+      <Link to='/filter' className="btn-filter">
         Filter
-      </button>
+      </Link>
 
       <div className="sortby">
         <span className="label-sortby">SortBy </span>

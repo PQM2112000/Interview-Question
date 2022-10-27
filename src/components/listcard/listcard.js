@@ -1,18 +1,9 @@
-import React, { useState } from "react";
-import {
-  AscName,
-  AscPrice,
-  DscName,
-  DscPrice,
-  Prodts,
-  Products,
-} from "../../data/Products";
+import React from "react";
+import { Products } from "../../data/Products";
 export default function Listcard() {
-  /* const [filt, setFilt] = useState(localStorage.getItem("filter"));
-  console.log(localStorage.getItem("filter")); */
   return (
     <div className="list-card">
-      {Prodts.map((p) => (
+      {Products.products.map((p) => (
         <div className="card">
           <div className="content-card">
             <div className="header-content">
@@ -30,7 +21,6 @@ export default function Listcard() {
           </div>
         </div>
       ))}
-      ;
     </div>
-  );
+  )
 }

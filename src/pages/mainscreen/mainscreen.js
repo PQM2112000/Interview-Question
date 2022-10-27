@@ -12,6 +12,6 @@ export default class Mainscreen extends Component {
         <Toppings />
         <Listcard />
       </div>
-    );
+    )
   }
 }
